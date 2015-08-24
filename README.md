@@ -1,4 +1,18 @@
 # rabbotlog4js helper
+
+##ryslog
+enable 514 port
+
+`vi /etc/rsyslog.conf`
+
+```
+$ModLoad imudp
+$UDPServerRun 514
+
+$ModLoad imtcp
+$InputTCPServerRun 514
+```
+
 ##Config
 
 ```
