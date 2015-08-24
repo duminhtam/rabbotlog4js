@@ -1,0 +1,19 @@
+{
+  "name": "rabbotlog4js",
+  "version": "1.0.0",
+  "description": "a logger helper for rabbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duminhtam/rabbotlog4js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duminhtam/rabbotlog4js/issues"
+  },
+  "homepage": "https://github.com/duminhtam/rabbotlog4js#readme"
+}
