@@ -1,6 +1,6 @@
 {
   "name": "rabbotlog4js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a logger helper for rabbot",
   "main": "index.js",
   "scripts": {
