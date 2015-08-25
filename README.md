@@ -13,29 +13,21 @@ $ModLoad imtcp
 $InputTCPServerRun 514
 ```
 
-##Config
-
-```
-os = require("os")
-
-module.exports =
-  log4js:
-    appenders: [ {
-      type: 'log4js-syslog-appender'
-      tag: 'My API'
-      facility: 'local0'
-      hostname: os.hostname()
-      port: 514
-    } ]
-
-```
-
 ##Example
 
 ```
 logger = require 'rabbotlog4js'
 
-console.log logger
+rabbotlog4js = require './rabbotlog4js'
+logger = rabbotlog4js.open 'appname', 'modulename'
+
+logger.debug 'this is debug of app: appname module:modulename'
+
+#Open Another log
+
+logger = rabbotlog4js.open 'other_appname', 'other_modulename'
+
+logger.debug 'this is debug of app: other_appname module:other_modulename'
 
 logger.trace('a trace message');
 logger.debug('a debug message');
@@ -43,6 +35,5 @@ logger.info('an info message');
 logger.warn('a warning message');
 logger.error('an error message');
 logger.fatal('a fatal message');
-
 
 ```
