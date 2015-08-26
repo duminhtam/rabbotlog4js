@@ -11,7 +11,7 @@ class rabbotlog4js
       } ]
 
     if debug?
-      log4jsConfig.appenders[1] = { type: "console" }
+      log4jsConfig.appenders[1] = { type: "console" } if debug is 'verbose'
 
 
     log4js = require 'log4js'
