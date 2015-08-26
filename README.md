@@ -24,7 +24,7 @@ logger.debug 'this is debug of app: appname module:modulename'
 
 #Open Another log with debug
 
-logger = rabbotlog4js.open 'other_appname', 'other_modulename', true
+logger = rabbotlog4js.open 'other_appname', 'other_modulename', 'verbose'
 
 logger.debug 'this is debug of app: other_appname module:other_modulename'
 
