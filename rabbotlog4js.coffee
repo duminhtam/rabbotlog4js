@@ -1,7 +1,7 @@
 os = require 'os'
 
 class rabbotlog4js
-  @open: (app, module) ->
+  @open: (app, module, debug) ->
     log4jsConfig =
       appenders: [ {
         type: 'log4js-ain2'
@@ -9,9 +9,15 @@ class rabbotlog4js
         hostname: os.hostname()
         port: 514
       } ]
+
+    if debug?
+      log4jsConfig.appenders[1] = { type: "console" }
+
+
     log4js = require 'log4js'
     log4jsConfig.appenders[0].tag = app
     log4js.configure log4jsConfig
+
     return log4js.getLogger module
 
 module.exports = rabbotlog4js
