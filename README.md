@@ -16,16 +16,15 @@ $InputTCPServerRun 514
 ##Example
 
 ```
-logger = require 'rabbotlog4js'
 
-rabbotlog4js = require './rabbotlog4js'
+rabbotlog4js = require 'rabbotlog4js'
 logger = rabbotlog4js.open 'appname', 'modulename'
 
 logger.debug 'this is debug of app: appname module:modulename'
 
-#Open Another log
+#Open Another log with debug
 
-logger = rabbotlog4js.open 'other_appname', 'other_modulename'
+logger = rabbotlog4js.open 'other_appname', 'other_modulename', true
 
 logger.debug 'this is debug of app: other_appname module:other_modulename'
 
