@@ -18,6 +18,6 @@
   "homepage": "https://github.com/duminhtam/rabbotlog4js#readme",
   "dependencies": {
     "log4js": "^0.6.26",
-    "log4js-ain2": "^0.1.6"
+    "log4js-syslog-appender": "^0.2.1"
   }
 }

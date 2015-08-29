@@ -4,7 +4,7 @@ class rabbotlog4js
   @open: (app, module, debug) ->
     log4jsConfig =
       appenders: [ {
-        type: 'log4js-ain2'
+        type: 'log4js-syslog-appender'
         facility: 'local0'
         hostname: os.hostname()
         port: 514
